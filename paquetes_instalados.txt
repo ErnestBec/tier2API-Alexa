@@ -1,0 +1,23 @@
+reactpy[fastapi]
+uvicorn[standard]
+reactpy_router
+python-dotenv
+pymongo
+passlib
+pyjwt
+httpx
+
+Name BD= Prueba_Tier2
+Collectiones DB
+Users
+CuentasPorCobrar
+Floors
+Products_Pza
+Products
+Racks
+RawMaterials
+Request_Client
+Rows
+SpaceRow
+TypeWarehouse
+Warehouse
