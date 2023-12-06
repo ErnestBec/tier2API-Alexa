@@ -18,6 +18,10 @@ product = APIRouter()
 def find_all_user():
     return productsEntity(db_name.Products.find())
 
+@product.get("/products-alexa", tags=["Products"])
+def find_all_alexa():
+    return productsEntity(db_name.Products.find())
+
 
 @product.get("/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(Portador())])
 def find_product(id: str):
