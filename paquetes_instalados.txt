@@ -6,6 +6,7 @@ pymongo
 passlib
 pyjwt
 httpx
+requests
 
 #Name BD= Prueba_Tier2
 #Collectiones DB

@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends
 from utils.db import db_name
 from schemas.schema_prducts import productsEntity
 from models.prodcuts_model import Prducto, updatePrducto
+import requests
 # Middlewares
 from middlewares.validate_product_middleware import product_update_validator, product_validate_middleware
 from middlewares.productExist_middleware import product_exist
@@ -21,7 +22,11 @@ def find_all_user():
 @product.get("/products-alexa", tags=["Products"])
 def find_all_alexa():
     return productsEntity(db_name.Products.find())
-
+@product.get("/serverOscar")
+def get_ip():
+    url ="http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+    orders_api = requests.get(url)
+    return {}
 
 @product.get("/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(Portador())])
 def find_product(id: str):
