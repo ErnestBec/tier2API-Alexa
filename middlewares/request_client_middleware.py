@@ -8,5 +8,5 @@ def exist_request_client(num_ref_solicitud):
         {"num_ref_solicitud": num_ref_solicitud})
     if request != None:
         raise HTTPException(
-            detail=f'Ya existe una solicitud con referencia: '{num_ref_solicitud}', no puede modificar la solicitud!', status_code=400)
+            detail=f'Ya existe una solicitud con referencia: {num_ref_solicitud}, no puede modificar la solicitud!', status_code=400)
     return
