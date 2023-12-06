@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import os
 
-db_hostname = os.getenv('DB_HOST')
+db_hostname = 't2mdb.eastus.cloudapp.azure.com'
 db_port = os.getenv('DB_PORT')
 conn = MongoClient(db_hostname, db_port)
 
